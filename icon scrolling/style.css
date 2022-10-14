@@ -1,0 +1,53 @@
+body {
+  background-color: #111;
+  overflow: hidden;
+}
+.background {
+  transform: translateY(-11rem);
+  position: relative;
+  rotate: -20deg;
+}
+
+.rows:nth-child(even) {
+  animation: animate 80s linear infinite;
+  animation-delay: -80s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.rows:nth-child(odd) {
+  animation: animateTwo 80s linear infinite;
+  animation-delay: -80s;
+}
+
+@keyframes animateTwo {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.rows {
+  white-space: nowrap;
+}
+.icon {
+  color: #444;
+  font-size: 3rem;
+  margin: 1rem 0.5rem 1rem 0.5rem;
+  transition: all 0.3s;
+}
+.icon:hover {
+  color: rgb(158, 240, 255);
+  text-shadow: 0 0 6rem rgb(158, 240, 255);
+  font-size: 3.5rem;
+  rotate: 20deg;
+}
